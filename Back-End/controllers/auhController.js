@@ -84,7 +84,7 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
     try {
-      // const user= req.user
+    
       return res.status(200).json({
         message:"logout success"
       })

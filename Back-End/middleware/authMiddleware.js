@@ -1,9 +1,9 @@
 const jwt = require('jsonwebtoken')
-const authMiddleware = (res, res, next) => {
+const authMiddleware = (req, res, next) => {
     try {
         const authHead = req.headers.authorization
         if (!authHead) return res.status(401).json({ message: "token required" })
-        const token = authHead.split(" ")[0]
+        const token = authHead.split(" ")[1]
 
         const payload = jwt.verify(token, process.env.JWT_SK)
         req.user = payload.id
@@ -13,3 +13,4 @@ const authMiddleware = (res, res, next) => {
         next(error)
     }
 }
+module.exports={authMiddleware}
