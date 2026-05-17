@@ -1,6 +1,9 @@
 
 
 import './App.css'
+import Destanitions from './components/destinationsFeatures/Destanitions.jsx'
+import Details from './components/Details/Details.jsx'
+import ReviewsCard from './components/ReviewsCard/ReviewsCard.jsx'
 
 function App() {
 
@@ -8,7 +11,9 @@ function App() {
   return (
     <>
 <div>
-  <h1>hello app</h1>
+ <Destanitions/>
+ <Details/>
+ <ReviewsCard/>
 </div>
     </>
   )
