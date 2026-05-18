@@ -8,6 +8,8 @@ const tripzSchema= new mongoose.Schema({
     duration:{type:Number, required:true, minlength:1, maxlength:2},
     rate:{type:Number, required:true, minlength:1, maxlength:3},
     price:{type:Number, required:true, minlength:3, maxlength:5}
+
+    //---------------------------------------------------------------> To be comtinued exprience and city and 
 });
 
 const tripzModel=mongoose.model("trips",tripzSchema);

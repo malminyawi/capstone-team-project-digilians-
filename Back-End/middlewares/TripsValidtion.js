@@ -10,18 +10,20 @@ const schema=Joi.object({
     duration:Joi.number().required().min(1).max(2),
     rate:Joi.number().required().min(1).max(2),
     price:Joi.number().required().min(3).max(5)
-
+    //---------------------------------------------------------------> To be comtinued exprience and city
 });
-const joiValidation=(tripzModel,schema)=>{
-    const {value,error}=schema.validate(tripzModel)
-}
+
 
 
 
 const tripsValidation=(req,res,next)=>{
 
     try{
+        const {value,error}=schema.validate(tripzModel)
+        if(error){throw new error}
+        req.body=value;
         next();
     }catch(err){next(err);}
 }
 
+module.exports=tripsValidation;
