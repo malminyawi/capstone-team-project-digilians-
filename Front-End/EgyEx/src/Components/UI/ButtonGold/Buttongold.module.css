@@ -1,0 +1,8 @@
+.btn{
+    background: var(--main-gold);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.btn:hover{
+    background: #d4af37d5;
+}
