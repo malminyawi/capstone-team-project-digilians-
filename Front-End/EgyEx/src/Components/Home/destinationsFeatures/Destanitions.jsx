@@ -1,13 +1,14 @@
 import { Card ,Button } from 'react-bootstrap'
-import pyramids from '../../assets/image.png'
-import nile from '../../assets/photo-1716639154156-db53b75a22ad.jpg'
-import luxor from '../../assets/photo-1675372802255-1dea0a7add1a.jpg'
-import CardDestinations from '../../ui/CardDestinations/CardDestinations'
+import pyramids from '../../../assets/image.png'
+import nile from '../../../assets/photo-1716639154156-db53b75a22ad.jpg'
+import luxor from '../../../assets/photo-1675372802255-1dea0a7add1a.jpg'
+import CardDestinations from '../../UI/CardDestinations/CardDestinations'
 import styles from './Destanitions.module.css'
+import Buttongold from '../../UI/ButtonGold/Buttongold'
 function Destanitions(){
 return(
 <>
-<div className={`${styles.container} container mt-5 `}>
+<div className={`${styles.container} container mt-5 my-4 `}>
 <div className={styles.destanitions}>
   {/* Head of Destanititons */}
   <div className={`${styles.destanitionHead} text-center`}>
@@ -32,7 +33,7 @@ return(
     </div>
   </div>
   
-  <button className={styles.btnMore}>View All Destanitions</button>
+ <Buttongold className={`${styles.btnMore} `}>Veiw All Details</Buttongold>
 </div>
 </div>
 

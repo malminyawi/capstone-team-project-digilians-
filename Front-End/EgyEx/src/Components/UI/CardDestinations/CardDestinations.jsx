@@ -1,14 +1,11 @@
 import { Card ,Button } from 'react-bootstrap'
-import pyramids from '../../assets/image.png'
-import nile from '../../assets/photo-1716639154156-db53b75a22ad.jpg'
-import luxor from '../../assets/photo-1675372802255-1dea0a7add1a.jpg'
 import styles from './CardDestinations.module.css'
 function CardDestinations({price,img,location,title,text,time,rate,number}){
     return(
  
       <div className='col-12 col-md-4'>
          <Card className={`${styles.card}`}  >
-          <span className={styles.price}>${price}</span>
+          <span className={`${styles.price}`}>${price}</span>
       <Card.Img variant="top" src={img} width={"22rem"} height={"220rem"} style={{borderRadius:"20px 20px 0 0"}} />
       <span className={styles.location}><i class="bi bi-geo-alt"></i> {location}</span>
       <Card.Body>
