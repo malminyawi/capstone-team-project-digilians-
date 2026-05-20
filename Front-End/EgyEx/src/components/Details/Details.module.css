@@ -1,0 +1,25 @@
+.container{
+    background-color:#f5ede0 ;
+}
+
+.explore{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+}
+.exploreDetails{
+    text-align: center;
+}
+.exploreDetails .h2{
+color: var(--mainColor);
+font-weight: 700;
+font-size: 36px;
+margin-bottom: 1.5%;
+}
+.exploreDetails .p{
+    color: var(--secondColor);
+    font-size: 18px;
+}
