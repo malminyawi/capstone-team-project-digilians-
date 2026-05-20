@@ -1,0 +1,35 @@
+.footer{
+    background: var(--main-color);
+}
+.para{
+    color: rgb(190, 190, 190);
+}
+
+.title{
+    color: var(--main-gold);
+}
+a{
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+}
+a:hover{
+    color: var(--main-gold);
+}
+i{
+    color: rgb(190, 190, 190);
+}
+.icon{
+    background-color: #3d78b367;
+}
+.icon:hover{
+    background-color: var(--main-gold);
+    
+}
+.icon:hover{
+i{ 
+    color: var(--main-color);
+ }
+}
+.border{
+    border: 1px solid var(--main-gold);
+}
