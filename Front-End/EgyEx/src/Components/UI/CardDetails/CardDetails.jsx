@@ -8,7 +8,7 @@ function CardDetails({icon,title,text}){
       <Card.Body>
 
         <Card.Title className={`${styles.title} d-flex flex-column align-items-center gap-3`}>
-            <i class={icon} style={{width:"50px" , backgroundColor:' #f6efd7', borderRadius:"35px",margin:"auto",padding:"6% 6.6%", color:'var(--thirdColor)'}}> </i>
+            <i class={icon} style={{width:"50px" , backgroundColor:' #f6efd7', borderRadius:"35px",margin:"auto",padding:"6% 6.6%", color:"var(--main-gold)!important"}}> </i>
           
             {title}
              </Card.Title>

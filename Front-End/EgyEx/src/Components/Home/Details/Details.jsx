@@ -1,6 +1,6 @@
 
   import styles from './Details.module.css'
-import CardDetails from '../../ui/CardDetails/CardDetails';
+import CardDetails from '../../Ui/CardDetails/CardDetails';
 
 const Details = () => {
   return (
