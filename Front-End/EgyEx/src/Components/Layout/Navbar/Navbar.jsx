@@ -1,14 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import style from "./Navbar.module.css"
 import Buttongold from "../../UI/ButtonGold/Buttongold";
 import Logo from "../../UI/logo/Logo";
 
 function Navbar() {
     const links=[
-        {title:"Home",path:""},
+        {title:"Home",path:"/"},
         {title:"Destinations",path:""},
-        {title:"About",path:""},
+        {title:"About",path:"/about"},
         {title:"Reviews",path:""},
+
     ]
   return (
     <nav className={`text-light shadow-lg ${style.nav}`}>
@@ -30,8 +31,8 @@ function Navbar() {
 
                 {/*------------------------ login & rigster button------------------------*/}
                <div className="col text-end">
-                    <button className={`${style.btn} text-white me-2 fw-semibold rounded-4 border-0 px-4 p-2`}>Login</button>
-                    <Buttongold>Sign Up</Buttongold>
+                    <Link to="/login" className={`${style.btn} text-white me-2 fw-semibold rounded-4 border-0 px-4 p-2`}>Login</Link>
+                   <Link to="/register" > <Buttongold>Sign Up</Buttongold> </Link>
                </div>
             </div>
         </div>
