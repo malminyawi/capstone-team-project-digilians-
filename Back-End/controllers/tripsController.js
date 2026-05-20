@@ -7,7 +7,7 @@ const mongoose=require("mongoose");
 const createTrip= async(req,res,next)=>{
     try{
     const trip = await trips.create(req.body);
-    if (!trip){throw new error}
+    
     res.status(201).json({Message:"Trip is added to website"});
     }catch(error){next(error)}
 }
@@ -15,9 +15,11 @@ const createTrip= async(req,res,next)=>{
 //delete a trip
 const deleteTrip= async(req,res,next)=>{
     try{
-    const tripId=req.params;
-    const trip = await trips.findOneAndDelete(tripId);
-    if (trip){throw new error}
+    const tripId=req.params._id;
+    console.log(tripId)
+    const trip = await trips.findById(tripId);
+    if(!trip){res.status(404).json({Message:"trip Not found"})}
+    const tripToDelete = await trips.findByIdAndDelete(tripId);
     res.status(200).json({Message:"Trip is deleted"});
     }catch(error){next(error)}
 }
@@ -26,10 +28,10 @@ const deleteTrip= async(req,res,next)=>{
 //add trips pictures
 const addTripImage= async(req,res,next)=>{
     try{
-    const tripId=req.params;
+    const tripId=req.params._id;
     const tripIamge=req.file;
     const trip = await trips.findOneByIdAndUpdate(tripId,tripIamge);
-    if (!trip){throw new error}
+    if(!trip){res.status(404).json({Message:"trip Not found"})}
     res.status(200).json({Message:"Image is added to",trip:trip.title});
     }catch(error){next(error)}
 }
@@ -41,8 +43,8 @@ const addTripImage= async(req,res,next)=>{
 //get a trip by id
 const getTripById= async(req,res,next)=>{
     try{
-    const trip = await trips.findById(req.params);
-    if (!trip){throw new error}
+    const trip = await trips.findById(req.params._id);
+    if(!trip){res.status(404).json({Message:"trip Not found"})}
     res.status(200).json({Message:"Trip:",trip});
     }catch(error){next(error)}
 }
@@ -51,7 +53,7 @@ const getTripById= async(req,res,next)=>{
 const getAllTrips= async(req,res,next)=>{
     try{
     const trips = await trips.find();
-    if (!trips){throw new error}
+    if(!trips){res.status(404).json({Message:"trip Not found"})}
     res.status(200).json({Message:"Trips:",trips});
     }catch(error){next(error)}
 }
@@ -59,9 +61,9 @@ const getAllTrips= async(req,res,next)=>{
 //get a trip by price
 const getTripByPrice= async(req,res,next)=>{
     try{
-    const pricee=req.params
+    const pricee=req.params.price
     const trips = await trips.find({price:pricee});
-    if (!trips){throw new error}
+    if(!trips){res.status(404).json({Message:"trip Not found"})}
     res.status(200).json({Message:"Trips:",trips});
     }catch(error){next(error)}
 }
@@ -69,9 +71,9 @@ const getTripByPrice= async(req,res,next)=>{
 //get a trip by city
 const getTripByCity= async(req,res,next)=>{
     try{
-    const cityy=req.params
+    const cityy=req.params.city
     const trips = await trips.find({city:cityy});
-    if (!trips){throw new error}
+    if(!trips){res.status(404).json({Message:"trip Not found"})}
     res.status(200).json({Message:"Trips:",trips});
     }catch(error){next(error)}
 }
@@ -79,9 +81,9 @@ const getTripByCity= async(req,res,next)=>{
 //get a trip by  experience
 const getTripByExp= async(req,res,next)=>{
     try{
-    const expp=req.params
+    const expp=req.params.exp
     const trips = await trips.find({exp:expp});
-    if (!trips){throw new error}
+    if(!trips){res.status(404).json({Message:"trip Not found"})}
     res.status(200).json({Message:"Trips:",trips});
     }catch(error){next(error)}
 }
