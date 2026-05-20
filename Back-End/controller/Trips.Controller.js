@@ -27,7 +27,7 @@ const deleteTrip= async(req,res,next)=>{
 const addTripImage= async(req,res,next)=>{
     try{
     const tripId=req.params;
-    const tripIamge=req.body;
+    const tripIamge=req.file;
     const trip = await trips.findOneByIdAndUpdate(tripId,tripIamge);
     if (!trip){throw new error}
     res.status(200).json({Message:"Image is added to",trip:trip.title});
