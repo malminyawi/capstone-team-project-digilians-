@@ -1,0 +1,18 @@
+.nav{
+    background: var(--main-color);
+}
+
+.links{
+    color: var(--main-white);
+    text-decoration: none;
+}
+.links:hover{
+    color: var(--main-gold);
+    cursor: pointer;
+}
+.btn{
+    background: var(--main-color);
+}
+.btn:hover{
+    background: #ffffff31;
+}

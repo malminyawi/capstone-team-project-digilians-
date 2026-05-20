@@ -1,9 +1,9 @@
 :root{
-    --mainColor:#0a2540;
-    --secondColor:#4a5578;
-    --whiteColor:#ffffff;
-    --thirdColor:#d4af37;
+    --main-color:#0a2540;
+    --main-gold:#d4af37;
+    --main-white:#ffff;
 }
-body{
-    background-color:#fdfbf7 ;
+*{
+    margin: 0;
+    padding: 0;
 }

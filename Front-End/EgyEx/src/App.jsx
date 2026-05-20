@@ -1,20 +1,23 @@
-
-
+import { Routes, Route } from "react-router-dom";
+import Navbar from "../src/Components/Layout/Navbar/Navbar"
+import Footer from "../src/Components/Layout/Footer/Footer"
 import './App.css'
-import Destanitions from './components/destinationsFeatures/Destanitions.jsx'
-import Details from './components/Details/Details.jsx'
-import ReviewsCard from './components/ReviewsCard/ReviewsCard.jsx'
-
+import Home from "./Pages/Home";
 function App() {
 
 
   return (
     <>
-<div>
- <Destanitions/>
- <Details/>
- <ReviewsCard/>
-</div>
+      <Navbar/>
+              <Routes>
+                <Route path="/" element={<Home/>}/>
+                
+                {/* 
+                <Route path="/users" element/>
+                <Route path="/projects" element/> 
+                */}
+              </Routes>
+      <Footer/>
     </>
   )
 }
