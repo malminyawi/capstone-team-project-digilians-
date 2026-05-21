@@ -5,10 +5,10 @@ import Logo from "../../UI/logo/Logo";
 
 function Navbar() {
     const links=[
-        {title:"Home",path:""},
-        {title:"Destinations",path:""},
-        {title:"About",path:""},
-        {title:"Reviews",path:""},
+        {title:"Home",path:"/home"},
+        {title:"Destinations",path:"/destination"},
+        {title:"About",path:"about"},
+        {title:"Reviews",path:"/reviews"},
     ]
   return (
     <nav className={`text-light shadow-lg ${style.nav}`}>
