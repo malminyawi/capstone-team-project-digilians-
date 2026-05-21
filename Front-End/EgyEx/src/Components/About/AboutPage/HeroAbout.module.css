@@ -1,0 +1,21 @@
+.imgBg{
+ 
+background: linear-gradient(rgba(1, 42, 75, 0.89), rgba(1, 42, 75, 0.534)), url(../../../assets/photo-1675372802255-1dea0a7add1a.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+.details{
+padding: 11%;
+text-align: center;
+}
+.details .h2{
+    color:var(--main-white);
+    font-size: 76px;
+    font-weight: 700;
+}
+.details .p{
+    color:var(--main-white);
+    font-size: 30px;
+    font-weight: 400;
+}

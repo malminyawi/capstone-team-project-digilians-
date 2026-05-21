@@ -1,0 +1,15 @@
+.img{
+    width: 90%;   
+}
+.row{
+   gap: 120px;
+}
+.img img{
+width:700px;
+    border-radius: 25px;
+  
+}
+.h3{
+    font-size: 40px;
+    font-weight: 700;
+}
