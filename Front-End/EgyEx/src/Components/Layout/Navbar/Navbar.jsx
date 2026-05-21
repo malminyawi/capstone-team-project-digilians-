@@ -6,13 +6,13 @@ import Logo from "../../UI/logo/Logo";
 function Navbar() {
     const links=[
         {title:"Home",path:"/"},
-        {title:"Destinations",path:""},
+        {title:"Destinations",path:"/destinations"},
         {title:"About",path:"/about"},
         {title:"Reviews",path:""},
 
     ]
   return (
-    <nav className={`text-light shadow-lg ${style.nav}`}>
+    <nav className={` ${style.nav} text-light  `}>
         <div className="container py-2 ">
             <div className=" row align-items-center ">
                 {/* ---------------------------logo------------------------------- */}
