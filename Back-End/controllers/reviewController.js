@@ -5,15 +5,15 @@ const Trip = require("../models/Trips.Models")
 // creatr comment
 const createReview = async(req,res) => {
     try{
-        const {desc, tripsId, userId, rate} = req.body 
+        const userId=req.user
+        const {desc, tripId, rate} = req.body 
 
         const user = await User.findById(userId)
-
         if(!user){
             return res.status(403).json({message:"User Not  Auth"})
         }
 
-        const trip = await Trip.findById(tripsId)
+        const trip = await Trip.findById(tripId)
         if(!trip){
             return res.status(404).json({message:"Trip Not Found"})
         }
@@ -22,7 +22,7 @@ const createReview = async(req,res) => {
         const review = await Review.create({
             desc,
             user:userId,
-            trip:tripsId
+            trip:tripId
         })
         res.status(200).json({message:"Review Created",review})
         
