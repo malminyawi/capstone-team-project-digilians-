@@ -1,0 +1,21 @@
+
+.filSelect{
+    background-color: var(--sand-color);
+color: var(--main-color) !important;
+border-radius: 10px;
+    
+}
+
+.filSelect:focus{
+    border-color: var(--main-gold)!important; 
+    border: 2px solid var(--main-gold);
+    box-shadow: 1px var(--main-gold) !important;
+
+}
+.reset{
+    color:var(--main-gold) ;
+
+}
+.textNavy, .textNavy h5, .textNavy label , .textNavy i {
+    color: var(--main-color) !important;
+}

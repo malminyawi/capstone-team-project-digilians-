@@ -1,4 +1,4 @@
-import DestinationHeader from "../Components/Trips/header/DestinationHeader";
+import DestinationHeader from "../Components/Trips/DestinationHeader/DestinationHeader";
 
 
 import DestinationContent from "../Components/Trips/content/DestinationContent"
