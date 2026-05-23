@@ -1,8 +1,8 @@
-import TripDetails from "../Components/TripDetails/TripDetails"
+import SingleTrip from "../Components/TripDetails/SingleTip"
 
 function SingleTripDetails(){
     return(<>
-    <TripDetails/>
+    <SingleTrip/>
     
     </>)
 }

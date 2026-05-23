@@ -22,10 +22,11 @@ function CardDestinations({ id, price, img, location, title, text, time, rate, n
             View Details
           </Link> */}
 
-{/* just for test */}
-          <Link to={`/tripDetails`} className={`${styles.btn} w-100 text-white`}>
+          {/* just for test */}
+            <Link to={`/tripDetails`} className={`${styles.btn} d-block text-center text-white px-5 rounded-pill py-2 `}>
             View Details
           </Link>
+
         </Card.Body>
       </Card>
     </div>

@@ -55,7 +55,7 @@ color: var(--main-color);
     color: var(--secondColor);
 }
 .btn{
-    width: 100%;
+    margin: 0 auto;
     border-radius: 25px;
     background-color: var(--main-color);
     color: var(--main-white);
