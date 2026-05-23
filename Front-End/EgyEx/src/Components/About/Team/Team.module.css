@@ -1,0 +1,13 @@
+.text{
+    color: var(--main-gold);
+    font-weight: 500;
+}
+.team h2{
+color: var(--main-color);
+font-weight: 700;
+font-size:38px;
+}
+.team p{
+    color: var(--secondColor);
+    font-size: 18px;
+}
